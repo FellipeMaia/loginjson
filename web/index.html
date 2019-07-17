@@ -27,15 +27,7 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/sb-admin.min.js"></script>
-    <script src="js/json-login.js"></script>
-    <script >
-        function load(page){
-            $("#included-wrapper").load(page+'?id='+sessionStorage.getItem('idSession')); 
-        } 
-        function color(color){
-            document.getElementById("content-wrapper").style.backgroundColor = color;
-        }
-    </script>
+    <script src="js/json-index.js"></script>
   </head>
 
   <body id="page-top" onload="load('dashboard.html')">
@@ -131,7 +123,7 @@
           <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
           <div class="modal-footer">
             <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-            <a class="btn btn-primary" href="login.html">Logout</a>
+            <button class="btn btn-primary" onclick="closeSession()">Logout</button>
           </div>
         </div>
       </div>
